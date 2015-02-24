@@ -17,6 +17,14 @@ for iter = 1:num_iters
     %       of the cost function (computeCostMulti) and gradient here.
     %
 
+	h=X*theta;
+	error = h - y;
+	%error_sqr = error.^2; %{use what you have learned}
+	%sum_er=sum([error_sqr]);
+	g=X'*error;
+	%Now scale the gradient by alpha and 1/m.
+	g=alpha*(1/m)*g;
+	theta=theta-g;
 
 
 
