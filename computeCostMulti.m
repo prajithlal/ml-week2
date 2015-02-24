@@ -16,6 +16,12 @@ J = 0;
 
 
 
+h = X*theta; %{multiply X and theta, in the proper order that the inner dimensions match}
+error = h-y;%{the difference between h and y}
+error_sqr = error.^2; %{use what you have learned}
+sum_er=sum([error_sqr]);
+J = 1/(2*m) * sum_er; % {multiply 1/(2*m) times the sum of the error_sqr vector}
+
 
 % =========================================================================
 
